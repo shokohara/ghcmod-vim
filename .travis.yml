@@ -6,7 +6,7 @@ ghc:
 sudo: false
 install: ./install-deps.sh
 before_script: vim --version
-script: ./test.sh
+script: travis_wait 30 ./test.sh
 notifications:
   webhooks:
     urls:
